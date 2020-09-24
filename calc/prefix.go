@@ -17,6 +17,12 @@ func PrefixEval(s string) (float64, error) {
 
 type PrefixParser struct {}
 
+// @Pawel: Good job getting it working with effectively two stacks
+// You have a tokenizer array and an expression stack for state
+// Can you think of  away to do it without any stacks?
+// Hint: recursion :)
+// This would be completely up to you. You've done very well on this exercise!
+// Karim
 func (PrefixParser) Parse(s string) (*ExprNode, error) {
 	tokens, err := Tokenize(s)
 	if err != nil {
